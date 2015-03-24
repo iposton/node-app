@@ -2,22 +2,19 @@ var express = require('express');
 
 var app = express();
 
-app.get('/about',function(req,res){
+app.get('/',function(req,res){
 
-
-	res.send('<h1>about us</h1>');
+	res.render('index.ejs',{title: 'Hello Welcome'});
 });
 
-app.get('/about/:title',function(req,res){
+app.get('/about',function(req,res){
 
-
-	res.send('<h1>'+req.params.title+'</h1>');
+	res.render('layout.ejs',{title: 'About Us',body: '<h1>About</h1>'});
 });
 
 app.get('/*',function(req,res){
 
-
-	res.send('<h1>Welcome to the homepage</h1>');
+	res.status(404).render('error.ejs',{title: 'error!' });
 });
-console.log('Server Started on localhost:3000')
+console.log('server started on localhost:3000');
 app.listen(3000);
