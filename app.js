@@ -1,20 +1,27 @@
 var express = require('express');
+var jade = require('jade');
 
+var portnumber = 3000;
+
+//Init express
 var app = express();
+console.log('Express Initialized');
 
+//Set views folder
+app.set('views',__dirname + '/views');
+//Init Jade
+app.set('view engine','jade');
+console.log('Jade Initialized');
+
+//Set static folder
+app.use(express.static(__dirname + '/public'));
+
+//Render index page
 app.get('/',function(req,res){
 
-	res.render('index.ejs',{title: 'Hello Welcome'});
-});
+	res.render('index', { title: 'Welcome' })
+})
 
-app.get('/about',function(req,res){
-
-	res.render('layout.ejs',{title: 'About Us',body: '<h1>About</h1>'});
-});
-
-app.get('/*',function(req,res){
-
-	res.status(404).render('error.ejs',{title: 'error!' });
-});
-console.log('server started on localhost:3000');
-app.listen(3000);
+//App Listen
+app.listen(portnumber);
+console.log('Connected to port '+portnumber);

@@ -1,22 +1,22 @@
 {
   "name": "nodeapp",
   "version": "0.0.1",
-  "description": "Express app with ejs",
+  "description": "Simple Node app which uses jade",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies":{
-    "express": "*",
-    "ejs":"*"
-  },
-  
+    "express":"*",
+    "jade":"*"
+
+    },
   "repository": {
     "type": "git",
     "url": "https://github.com/iposton/node-app.git"
   },
   "author": "Ian Poston",
-  "license": "GNU",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/iposton/node-app/issues"
   },
