@@ -1,27 +1,55 @@
+//Module Dependencies
 var express = require('express');
-var jade = require('jade');
+var morgan = require('morgan');
+var stylus = require('stylus');
+var nib = require('nib');
+var routes = require('./routes');
+var user = require('./routes/user');
+var http = require('http');
+var path = require('path');
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/nodeapp');
 
+//Set port number
 var portnumber = 3000;
 
-//Init express
+//Initialize Express
 var app = express();
-console.log('Express Initialized');
+console.log('Express has been initialized');
 
-//Set views folder
-app.set('views',__dirname + '/views');
-//Init Jade
-app.set('view engine','jade');
-console.log('Jade Initialized');
+function compile(str,path){
+	return stylus(str)
+	.set('filename', path)
+	.use(nib())
+}
 
-//Set static folder
-app.use(express.static(__dirname + '/public'));
+//Set Views Folder
+app.set('views',__dirname+'/views');
 
-//Render index page
-app.get('/',function(req,res){
+//Initialize Jade
+app.set('view engine', 'jade');
+console.log('Jade has been initialized');
 
-	res.render('index', { title: 'Welcome' })
-})
+//Stylus Middleware
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(express.cookieParser('mykey'));
+app.use(express.session());
+app.use(app.router);
+app.use(stylus.middleware(
+	{
+		src:__dirname + '/public',
+		compile: compile
+	}
+))
+app.use(express.static(__dirname+'/public'));
 
-//App Listen
+app.get('/',routes.index);
+app.get('/userlist',routes.userlist(db));
+app.post('/adduser',routes.adduser(db));
+
 app.listen(portnumber);
-console.log('Connected to port '+portnumber);
+console.log('Server is now running on port '+portnumber);

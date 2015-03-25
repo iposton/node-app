@@ -2,17 +2,26 @@ doctype html
 html
 	head
 		title #{title} - Node.js Demo Site
-		link(rel='stylesheet', href='/css/styles.css')
+		link(rel='stylesheet',href='/css/styles.css')
 	body
 		header
 			.container
-			h1 Node.js Demo Site
+				h1 Node.js Demo Site
 		.container
-			.main-content
-				block content
-			.sidebar
-				block sidebar
-		footer
-			.container
-				p Copyright &copy; 2015
+				.main-content
+					block content
+				.sidebar
+					block sidebar
+						.block
+							h1 Registration Form
+							form.addUser(name="adduser",method="post",action="/adduser")
+								input(type="text", placeholder="First Name", name="first_name")
+								input(type="text", placeholder="Last Name", name="last_name")
+								input(type="text", placeholder="Username", name="username")
+								input(type="text", placeholder="Email", name="email")
+								input(type="text", placeholder="Password", name="password")
+								button#btnSubmit(type="submit") submit
+			footer
+				.container
+					p Copyright &copy; 2015
 

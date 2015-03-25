@@ -1,116 +1,248 @@
-*{
-	margin: 0;
-	padding: 0;
+/*
+ * Import Nib
+ */
+/*
+ * Nib Reset File
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-
 body {
-	line-height:1.5;
-	font-family: Arial;
-	color:#000;
-	background:#fff;
+  line-height: 1;
+  color: #000;
+  background: #fff;
 }
-
-a{
-	color:#333;
+ol,
+ul {
+  list-style: none;
 }
-
-ul, li{
-	list-style:none;
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
 }
-
-.container{
-	width:80%;
-	margin:auto;
-	overflow:hidden;
-
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
-
-header{
-	padding: 20px 10px;
-	color: #fff;
-	background: #333;
-	margin-bottom:20px;
+a img {
+  border: none;
 }
-
-header h1 {
-
-
-	color:#fff;
+/*
+ * Set Variables
+ */
+body {
+  font-family: 'Arial';
+  font-size: 14px;
+  background-color: #f4f4f4;
+  color: #444;
 }
-
-.main-content{
-	float:left;
-	width:70%;
+h1 {
+  font-size: 20px;
+  line-height: 1.8em;
 }
-
-.main-content p{
-
-		margin-bottom: 20px;
+a {
+  color: #666;
 }
-
-.sidebar{
-	float:right;
-	width:27%;
+header {
+  padding: 20px 10px;
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 20px;
+  background-color: #333;
 }
-
-.sidebar .block{
-
-	border-radius:5px;
-	border:1px solid #ccc;
-	padding: 0 10px 10px 10px;
-	background:#f4f4f4;
-	overflow:hidden;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
-
-.sidebar h1{
-
-font-size:20px;
+.main-content {
+  float: left;
+  width: 70%;
 }
-
-.sidebar .block h1{
-	margin: 13px;
-	padding-bottom: 10px;
-	border-bottom: 1px dotted #ddd;
+.main-content p {
+  margin-bottom: 20px;
 }
-
+.sidebar {
+  float: right;
+  width: 27%;
+}
+.sidebar .block {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px 10px 10px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+.sidebar .block h1 {
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.8;
+}
 .readmore {
-
-	float:right;
+  float: right;
 }
-
 .readmore a {
-	color: #666;
+  color: #666;
 }
-
-footer{
-	border-top:1px dotted #ccc;
-	padding-top: 5px;
-	text-align:center;
-	margin-top:20px;
+footer {
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 20px;
 }
-
-@media(max-width:568px){
-	header{
-		text-align:center;
-
-	}
-	.main-content{
-		float:none;
-		width:100%;
-		clear: both;
-		text-align:center;
-	}
-
-	.sidebar {
-		float:none;
-		width: 100%;
-		clear:both;
-		text-align:center;
-
-	}
-
-	.sidebar .block {
-
-		margin: 0;
-	}
+br {
+  clear: both;
+}
+ul.featurelist {
+  margin-bottom: 20px;
+  display: block;
+  overflow: auto;
+}
+ul.featurelist li {
+  line-height: 2em;
+  border-bottom: #ccc 1px dotted;
+  float: left;
+  width: 200px;
+}
+form.addUser input {
+  margin-bottom: 15px;
+  border: 1px #ccc solid;
+  padding: 5px;
+  height: 22px;
+  width: 95%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+form.addUser button {
+  clear: both;
+  display: block;
+}
+.userlistlink {
+  clear: both;
+  padding: 5px;
+  background: #ccc;
+  margin-bottom: 20px;
+  display: block;
+}
+.userlistlink p {
+  margin: 0;
+  padding: 0;
+}
+th,
+tr,
+td {
+  padding: 5px;
+}
+tr {
+  border-bottom: 1px #ccc dashed;
+  display: block;
+}
+td,
+th {
+  width: 100px;
+  text-align: left;
+}
+@media (max-width: 568px) {
+  header {
+    text-align: center;
+  }
+  .main-content {
+    float: none;
+    width: 100%;
+    clear: both;
+    text-align: center;
+  }
+  .sidebar {
+    float: none;
+    width: 100%;
+    clear: both;
+    text-align: center;
+  }
+  .sidebar .block {
+    margin: 0;
+  }
+  ul.featurelist li {
+    line-height: 2em;
+    border-bottom: #ccc 1px dotted;
+    float: none;
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+  }
 }

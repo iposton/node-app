@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json nodeapp@0.0.1 No README data
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/ianposton/Desktop/udemy/nodeapp',
+6 verbose install   [ 'express', 'jade', 'nib', 'mongodb', 'morgan', 'stylus', 'monk' ] ]
+7 info preinstall nodeapp@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping mongodb@* /Users/ianposton/Desktop/udemy/nodeapp
+10 verbose already installed skipping morgan@* /Users/ianposton/Desktop/udemy/nodeapp
+11 verbose already installed skipping stylus@* /Users/ianposton/Desktop/udemy/nodeapp
+12 verbose cache add [ 'monk@1.3.20', null ]
+13 verbose cache add name=undefined spec="monk@1.3.20" args=["monk@1.3.20",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'monk@1.3.20',
+14 verbose parsed url   path: 'monk@1.3.20',
+14 verbose parsed url   href: 'monk@1.3.20' }
+15 verbose cache add name="monk" spec="1.3.20" args=["monk","1.3.20"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '1.3.20',
+16 verbose parsed url   path: '1.3.20',
+16 verbose parsed url   href: '1.3.20' }
+17 verbose addNamed [ 'monk', '1.3.20' ]
+18 verbose addNamed [ '1.3.20', '1.3.20' ]
+19 silly lockFile 4843d1eb-monk-1-3-20 monk@1.3.20
+20 verbose lock monk@1.3.20 /Users/ianposton/.npm/4843d1eb-monk-1-3-20.lock
+21 verbose already installed skipping express@* /Users/ianposton/Desktop/udemy/nodeapp
+22 verbose already installed skipping jade@* /Users/ianposton/Desktop/udemy/nodeapp
+23 verbose already installed skipping nib@* /Users/ianposton/Desktop/udemy/nodeapp
+24 verbose request where is /monk
+25 verbose request registry https://registry.npmjs.org/
+26 verbose request id a50c254faf7ec231
+27 verbose url raw /monk
+28 verbose url resolving [ 'https://registry.npmjs.org/', './monk' ]
+29 verbose url resolved https://registry.npmjs.org/monk
+30 verbose request where is https://registry.npmjs.org/monk
+31 info trying registry request attempt 1 at 16:35:25
+32 verbose etag "ENRHQZBKJXY95XH0JT3WK3DPR"
+33 http GET https://registry.npmjs.org/monk
+34 http 304 https://registry.npmjs.org/monk
+35 silly registry.get cb [ 304,
+35 silly registry.get   { date: 'Tue, 24 Mar 2015 23:35:25 GMT',
+35 silly registry.get     server: 'Apache',
+35 silly registry.get     via: '1.1 varnish',
+35 silly registry.get     'last-modified': 'Tue, 24 Mar 2015 23:35:25 GMT',
+35 silly registry.get     'cache-control': 'max-age=60',
+35 silly registry.get     etag: '"ENRHQZBKJXY95XH0JT3WK3DPR"',
+35 silly registry.get     age: '0',
+35 silly registry.get     'x-served-by': 'cache-ord1720-ORD',
+35 silly registry.get     'x-cache': 'MISS',
+35 silly registry.get     'x-cache-hits': '0',
+35 silly registry.get     'x-timer': 'S1427240125.392107,VS0,VE345',
+35 silly registry.get     vary: 'Accept',
+35 silly registry.get     'content-length': '0',
+35 silly registry.get     'keep-alive': 'timeout=10, max=50',
+35 silly registry.get     connection: 'Keep-Alive' } ]
+36 verbose etag https://registry.npmjs.org/monk from cache
+37 silly lockFile 4843d1eb-monk-1-3-20 monk@1.3.20
+38 silly lockFile 4843d1eb-monk-1-3-20 monk@1.3.20
+39 error Error: version not found: monk@1.3.20
+39 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:125:12
+39 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+39 error     at Object.oncomplete (fs.js:107:15)
+40 error If you need help, you may report this *entire* log,
+40 error including the npm and node versions, at:
+40 error     <http://github.com/npm/npm/issues>
+41 error System Darwin 14.0.0
+42 error command "node" "/usr/local/bin/npm" "install"
+43 error cwd /Users/ianposton/Desktop/udemy/nodeapp
+44 error node -v v0.10.33
+45 error npm -v 1.4.28
+46 verbose exit [ 1, true ]
