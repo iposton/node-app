@@ -1,4 +1,4 @@
-# Node.js App with Express Framework and Jade Template Engine
+# Node.js App with Express Framework and Jade Template Engine [![Code Climate](https://codeclimate.com/github/iposton/node-app/badges/gpa.svg)](https://codeclimate.com/github/iposton/node-app)
 
 <h3>To run this app locally</h3>
 <ul>
