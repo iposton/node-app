@@ -1,6 +1,6 @@
 # Node.js App with Express Framework and Jade Template Engine [![Code Climate](https://codeclimate.com/github/iposton/node-app/badges/gpa.svg)](https://codeclimate.com/github/iposton/node-app)
 
-This app allows you to register user inforamtion that is displayed in a view after submit is clicked. The data is stored in MongoDB. 
+This app allows you to register user information that is displayed in a view after submit is clicked. The data is stored in MongoDB. 
 
 <h3>To run this app locally</h3>
 <ul>
